@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: dockerfile.dev
     ports:
-      - 3000:3000
+      - ${APP_PORT}:${APP_PORT}
     volumes:
       - .:/app
     restart: always
