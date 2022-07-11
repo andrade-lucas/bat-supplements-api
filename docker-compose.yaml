@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: bat-supplements-api
+    build: 
+      context: .
+      dockerfile: dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    restart: always
