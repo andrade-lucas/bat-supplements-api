@@ -8,5 +8,5 @@ RUN npm run build
 FROM node:16.16-alpine
 WORKDIR /app
 COPY --from=builder /app ./
-EXPOSE 3000
+EXPOSE ${APP_PORT}
 CMD ["npm", "run", "start:prod"]
